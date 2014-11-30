@@ -1,0 +1,26 @@
+@import (reference) "bower_components/bootstrap/less/variables.less";
+
+.dropdown-menu {
+// Links within the dropdown menu
+    > li > .checkbox {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: @line-height-base;
+        color: @dropdown-link-color;
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+// Hover/Focus state
+.dropdown-menu > li > .checkbox {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: @dropdown-link-hover-color;
+        background-color: @dropdown-link-hover-bg;
+    }
+}

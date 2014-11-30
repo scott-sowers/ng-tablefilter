@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="tableFilter.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="container" ng-controller="MyCtrl">
+        <div class="row">        
+            <table class="table" table-filter rows="data">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender <span dropdown-filter column="gender"></span></th>
+                        <th>Company</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in data">
+                        <td>{{row.name}}</td>
+                        <td>{{row.age}}</td>
+                        <td>{{row.gender}}</td>
+                        <td>{{row.company}}</td>
+                        <td>{{row.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

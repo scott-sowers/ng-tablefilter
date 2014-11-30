@@ -1,0 +1,22 @@
+<span class="dropdown" on-toggle="toggled(open)">
+    <span class="dropdown-toggle">
+        <span class="glyphicon glyphicon-filter"></span>
+    </span>
+    <ul class="dropdown-menu" role="menu">
+        <li role="presentation" ng-click="sort('asc')"><a role="menu-item">Sort Ascending</a></li>
+        <li role="presentation" ng-click="sort('desc')"><a role="menu-item">Sort Descending</a></li>
+        <li role="presentation" class="divider"></li>
+        
+        <li role="presentation" ng-click="checkAll()"><a role="menu-item">Check All</a></li>
+        <li role="presentation" ng-click="uncheckAll()"><a role="menu-item">Uncheck All</a></li>
+        <li role="presentation" class="divider"></li>
+        
+        <li role="presentation" ng-repeat="option in options">
+            <div class="checkbox">
+                <label>
+                    <input ng-model="option.selected" type="checkbox"> {{option.value}}
+                </label>
+            </div>
+        </li>
+    </ul>
+</span>
